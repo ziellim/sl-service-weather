@@ -25,7 +25,7 @@ class GreetingResourceTest {
     WireMock wireMock;
 
     @Test
-    void testHelloEndpoint() {
+    void shouldReturnTHeWeather() {
         wireMock.register(get(urlEqualTo("/current?key=key&city=Paris"))
                 .willReturn(ok().withHeader("content-type", "application/json")
                         .withBody(weatherbitResponse())));
